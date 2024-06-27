@@ -1,0 +1,506 @@
+[
+  {
+    "name": "Nike Zoom Vomero 5",
+    "price": 521,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 1
+  },
+  {
+    "name": "Nike Dunk Low Retro",
+    "price": 529.52,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 2
+  },
+  {
+    "name": "Nike Waffle Debut",
+    "price": 899,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 3
+  },
+  {
+    "name": "Nike Air Max SYSTM",
+    "price": 599,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 4
+  },
+  {
+    "name": "Nike E-Series 1.0",
+    "price": 1299,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 5
+  },
+  {
+    "name": "Nike Blazer Low '77 Jumbo",
+    "price": 1899.99,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 6
+  },
+  {
+    "name": "Jordan Max Aura 5",
+    "price": 999,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 7
+  },
+  {
+    "name": "Jordan Retro 6 G",
+    "price": 999.69,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "jordan",
+    "sale": true,
+    "sorting": 8
+  },
+  {
+    "name": "Jordan Stay Loyal 2",
+    "price": 1229,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 9
+  },
+  {
+    "name": "Jordan One Take 4 PF",
+    "price": 899,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "jordan",
+    "sale": true,
+    "sorting": 10
+  },
+  {
+    "name": "Air Jordan 7 Retro",
+    "price": 699,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 11
+  },
+  {
+    "name": "Jordan Why Not .6 PF",
+    "price": 999,
+    "description": "Men's Shoes",
+    "gender": "men",
+    "category": "jordan",
+    "sale": true,
+    "sorting": 12
+  },
+  {
+    "name": "Nike InfinityRN 4",
+    "price": 899.59,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": false,
+    "sorting": 13
+  },
+  {
+    "name": "Nike Free RN NN",
+    "price": 799.99,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": true,
+    "sorting": 14
+  },
+  {
+    "name": "Nike Renew Run 4",
+    "price": 899,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": false,
+    "sorting": 15
+  },
+  {
+    "name": "Nike Vaporfly 3",
+    "price": 899.95,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": true,
+    "sorting": 16
+  },
+  {
+    "name": "Nike Zoom Fly 5",
+    "price": 559.99,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": false,
+    "sorting": 17
+  },
+  {
+    "name": "Nike Invincible 3 SE",
+    "price": 999.99,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": true,
+    "sorting": 18
+  },
+  {
+    "name": "Nike Revolution 6 FlyEase",
+    "price": 1249.89,
+    "description": "Men's Road Running Shoes",
+    "gender": "men",
+    "category": "running",
+    "sale": false,
+    "sorting": 19
+  },
+  {
+    "name": "Nike Air Force 1 '07 EasyOn",
+    "price": 1249.89,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 20
+  },
+  {
+    "name": "Nike Air Max SC",
+    "price": 529.52,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 21
+  },
+  {
+    "name": "Nike Tech Hera",
+    "price": 899,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 22
+  },
+  {
+    "name": "Nike Gamma Force",
+    "price": 599,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 23
+  },
+  {
+    "name": "Nike Zoom Air Fire",
+    "price": 1299,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 24
+  },
+  {
+    "name": "Nike Air Max 97 Futura",
+    "price": 1899.99,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 25
+  },
+  {
+    "name": "Air Jordan 1 Low SE",
+    "price": 999,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "jordan",
+    "sale": true,
+    "sorting": 26
+  },
+  {
+    "name": "Jordan Stadium 90",
+    "price": 999.69,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 27
+  },
+  {
+    "name": "Air Jordan 11 Retro Low",
+    "price": 1229,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "jordan",
+    "sale": true,
+    "sorting": 28
+  },
+  {
+    "name": "Air Jordan 1 Zoom CMFT 2",
+    "price": 899,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 29
+  },
+  {
+    "name": "Air Jordan 1 Elevate High",
+    "price": 699,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "jordan",
+    "sale": true,
+    "sorting": 30
+  },
+  {
+    "name": "Air Jordan 2 Retro Low",
+    "price": 999,
+    "description": "Women's Shoes",
+    "gender": "women",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 31
+  },
+  {
+    "name": "Nike InfinityRN 4",
+    "price": 899.59,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": true,
+    "sorting": 32
+  },
+  {
+    "name": "Nike Quest 5",
+    "price": 799.99,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": false,
+    "sorting": 33
+  },
+  {
+    "name": "Nike Winflo 10",
+    "price": 899,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": true,
+    "sorting": 34
+  },
+  {
+    "name": "Nike Ultrafly",
+    "price": 899.95,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": false,
+    "sorting": 35
+  },
+  {
+    "name": "Nike Zoom Fly 5",
+    "price": 559.99,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": true,
+    "sorting": 36
+  },
+  {
+    "name": "Nike Zegama",
+    "price": 999.99,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": false,
+    "sorting": 37
+  },
+  {
+    "name": "Nike Revolution 6",
+    "price": 1249.89,
+    "description": "Women's Road Running Shoes",
+    "gender": "women",
+    "category": "running",
+    "sale": true,
+    "sorting": 38
+  },
+  {
+    "name": "Nike Air More Uptempo",
+    "price": 999.99,
+    "description": "Men's Slippers",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 39
+  },
+  {
+    "name": "Nike Offcourt Adjust",
+    "price": 999.99,
+    "description": "Men's Slippers",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 40
+  },
+  {
+    "name": "Jordan Super Play",
+    "price": 999.99,
+    "description": "Men's Slippers",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 41
+  },
+  {
+    "name": "Nike x MMW 005",
+    "price": 999.99,
+    "description": "Men's Slippers",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 42
+  },
+  {
+    "name": "Nike Vista",
+    "price": 999.99,
+    "description": "Men's slippers",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 43
+  },
+  {
+    "name": "Nike Offcourt",
+    "price": 999.99,
+    "description": "Men's Slippers",
+    "gender": "men",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 44
+  },
+  {
+    "name": "Nike Air More Uptempo",
+    "price": 999.99,
+    "description": "Women's Slippers",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 45
+  },
+  {
+    "name": "Nike Offcourt Adjust",
+    "price": 999.99,
+    "description": "Women's Slippers",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 46
+  },
+  {
+    "name": "Jordan Super Play",
+    "price": 999.99,
+    "description": "Women's Slippers",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 47
+  },
+  {
+    "name": "Nike x MMW 005",
+    "price": 999.99,
+    "description": "Women's Slippers",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 48
+  },
+  {
+    "name": "Nike Vista",
+    "price": 999.99,
+    "description": "Women's slippers",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": false,
+    "sorting": 49
+  },
+  {
+    "name": "Nike Offcourt",
+    "price": 999.99,
+    "description": "Women's Slippers",
+    "gender": "women",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 50
+  },
+  {
+    "name": "Nike Pegasus 40 (Eliud Kipchoge)",
+    "price": 999.99,
+    "description": "Road Running Shoes",
+    "gender": "unisex",
+    "category": "running",
+    "sale": false,
+    "sorting": 51
+  },
+  {
+    "name": "Nike Alphafly 2",
+    "price": 999.99,
+    "description": "Road Running Shoes",
+    "gender": "unisex",
+    "category": "running",
+    "sale": true,
+    "sorting": 52
+  },
+  {
+    "name": "Air Jordan XXXVIII 'FIBA'",
+    "price": 999.99,
+    "description": "Unisex Shoes",
+    "gender": "unisex",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 53
+  },
+  {
+    "name": "Nike Vaporfly 3 'Eliud Kipchoge'",
+    "price": 999.99,
+    "description": "Road Running Shoes",
+    "gender": "unisex",
+    "category": "running",
+    "sale": true,
+    "sorting": 54
+  },
+  {
+    "name": "AJKO 1",
+    "price": 999.99,
+    "description": "Unisex Shoes",
+    "gender": "unisex",
+    "category": "jordan",
+    "sale": false,
+    "sorting": 55
+  },
+  {
+    "name": "Nike Air Force 1 LV8",
+    "price": 999.99,
+    "description": "Unisex Shoes",
+    "gender": "unisex",
+    "category": "lifestyle",
+    "sale": true,
+    "sorting": 56
+  }
+]
