@@ -1,11 +1,144 @@
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import styled, { css } from "styled-components";
+import Row from "./Row";
+
+const SearchMenu = styled.div`
+  min-height: 100vh;
+  width: 100vw;
+  padding-inline: 2.4rem;
+  padding-top: 1.6rem;
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+
+  ${(props) =>
+    props.isvisible === "true" &&
+    css`
+      opacity: 1;
+      pointer-events: auto;
+    `}
+
+  @media (width > 1000px) {
+    padding-left: 34%;
+    padding-right: 26.8%;
+    min-height: auto;
+    padding-bottom: 3%;
+    padding-top: 0.8rem;
+  }
+`;
+
+const Nav = styled.nav`
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 5.4rem;
+  padding-inline: 1.6rem;
+  background-color: #ffffffaa;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+
+  @media (width > 700px) {
+    padding-inline: 3.2rem;
+  }
+
+  @media (width > 1000px) {
+    padding-inline: 4rem;
+    min-height: 6rem;
+  }
+`;
+
+const NavSearchBar = styled.div`
+  background-color: inherit;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  border: 0.5px solid var(--color-border-faded);
+`;
+
+const IconContainer = styled.div`
+  border-radius: 50%;
+  padding: 0.5rem;
+  max-width: 32px;
+  /* &:active {
+      background-color: $color-active;
+    } */
+`;
+
+const CustomRow = styled(Row)`
+  justify-self: flex-end;
+`;
+
+const SearchBar = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  background-color: #eee;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border-radius: 3.2rem;
+  max-width: 80%;
+`;
+
+const SearchInput = styled.input`
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+`;
+
+const CloseButton = styled.p`
+  font-weight: 500;
+  position: absolute;
+  top: 2.8rem;
+  right: 5%;
+  cursor: pointer;
+`;
+
+const Container = styled.div`
+  display: grid;
+  gap: 1.6rem;
+  margin-top: 4rem;
+
+  & > :first-child {
+    color: $color-faded;
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+  }
+
+  & > :not(:first-child) {
+    font-weight: 500;
+    border: none;
+    background-color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+`;
+
+const ButtonSuggest = styled.button`
+  font-size: 2.4rem;
+  &:hover {
+    color: var(--color-faded);
+  }
+`;
+
 export default function Navbar() {
-  const searchMenuRef = useRef(null);
   const searchInputRef = useRef(null);
-  const navLinkRef = useRef(null);
-  const navOverlayRef = useRef(null);
   const [searchInput, setSearchInput] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+
   const navigate = useNavigate();
 
   function goToFavourites() {
@@ -31,29 +164,29 @@ export default function Navbar() {
   }
 
   function showSearchMenu() {
-    searchMenuRef.current.classList.add("show-element");
+    setIsVisible(true);
+    searchInputRef.current.focus();
   }
 
   function closeSearchMenu() {
     setSearchInput("");
-    searchMenuRef.current.classList.remove("show-element");
+    setIsVisible(false);
   }
 
   return (
     <>
-      <nav id="navbar">
+      <Nav>
         <Link to={"/"} className="logo-container">
           <img src="images/logo.svg" alt="nike-logo" />
         </Link>
 
-        <div className="search-bar-main" onClick={showSearchMenu}>
-          <div className="icon-container search-icon-container">
+        <NavSearchBar onClick={showSearchMenu}>
+          <IconContainer>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="search-icon"
             >
               <path
                 fill="none"
@@ -64,11 +197,11 @@ export default function Navbar() {
                 d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314Z"
               />
             </svg>
-          </div>
-        </div>
+          </IconContainer>
+        </NavSearchBar>
 
-        <div className="icons">
-          <div onClick={goToCart} className="icon-container bag-icon-container">
+        <CustomRow>
+          <IconContainer onClick={goToCart}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -81,12 +214,9 @@ export default function Navbar() {
                 d="M216 64h-40a48 48 0 0 0-96 0H40a16 16 0 0 0-16 16v120a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16Zm-88-32a32 32 0 0 1 32 32H96a32 32 0 0 1 32-32Zm88 168H40V80h40v16a8 8 0 0 0 16 0V80h64v16a8 8 0 0 0 16 0V80h40Z"
               />
             </svg>
-          </div>
+          </IconContainer>
 
-          <div
-            onClick={goToFavourites}
-            className="icon-container heart-icon-container"
-          >
+          <IconContainer onClick={goToFavourites}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -100,9 +230,9 @@ export default function Navbar() {
               />
               <path fill="none" d="M0 0h36v36H0z" />
             </svg>
-          </div>
+          </IconContainer>
 
-          <div className="icon-container account-icon-container">
+          <IconContainer>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -117,7 +247,7 @@ export default function Navbar() {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
+          </IconContainer>
           {/* <div
             onClick={showNavMobile}
             className="icon-container menu-icon-container"
@@ -135,12 +265,12 @@ export default function Navbar() {
               />
             </svg>
           </div> */}
-        </div>
-      </nav>
+        </CustomRow>
+      </Nav>
 
-      <div ref={searchMenuRef} className="search-menu hide-element">
-        <div className="search-bar">
-          <div className="search-icon-container">
+      <SearchMenu isvisible={isVisible.toString()}>
+        <SearchBar>
+          <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -158,22 +288,17 @@ export default function Navbar() {
             </svg>
           </div>
 
-          <form
-            id="search-form"
-            onSubmit={(e) => searchQuery(e)}
-            className="search-input-form"
-          >
-            <input
+          <form id="search-form" onSubmit={(e) => searchQuery(e)}>
+            <SearchInput
               ref={searchInputRef}
               type="text"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Search"
-              className="search-input"
             />
           </form>
 
-          <div className="clear-input hide-element">
+          <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -187,40 +312,26 @@ export default function Navbar() {
               />
             </svg>
           </div>
-        </div>
+        </SearchBar>
 
-        <p onClick={closeSearchMenu} className="search-close-btn">
-          Cancel
-        </p>
+        <CloseButton onClick={closeSearchMenu}>Cancel</CloseButton>
 
-        <div className="search-suggestions-container">
+        <Container>
           <p>Popular Search Terms</p>
-          <button
-            onClick={(e) => searchSuggestion(e)}
-            className="search-suggestion"
-          >
-            <h3>Jordan</h3>
-          </button>
-          <button
-            onClick={(e) => searchSuggestion(e)}
-            className="search-suggestion"
-          >
-            <h3>Air Force</h3>
-          </button>
-          <button
-            onClick={(e) => searchSuggestion(e)}
-            className="search-suggestion"
-          >
-            <h3>Air Max</h3>
-          </button>
-          <button
-            onClick={(e) => searchSuggestion(e)}
-            className="search-suggestion"
-          >
-            <h3>Zoom</h3>
-          </button>
-        </div>
-      </div>
+          <ButtonSuggest onClick={(e) => searchSuggestion(e)}>
+            Jordan
+          </ButtonSuggest>
+          <ButtonSuggest onClick={(e) => searchSuggestion(e)}>
+            Air Force
+          </ButtonSuggest>
+          <ButtonSuggest onClick={(e) => searchSuggestion(e)}>
+            Air Max
+          </ButtonSuggest>
+          <ButtonSuggest onClick={(e) => searchSuggestion(e)}>
+            Zoomo
+          </ButtonSuggest>
+        </Container>
+      </SearchMenu>
     </>
   );
 }

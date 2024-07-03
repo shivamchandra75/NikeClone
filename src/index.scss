@@ -17,10 +17,10 @@ $font-primary: "Inter", sans-serif;
 // because of this you can see that in desktop css i have to unset many things that i set on Mobile
 // The correct approach should be Desktop -> Tablet -> Mobile
 
-@font-face {
-  font-family: "BDO Grotesk";
-  src: local("BDO Grotesk") url("/public/Fonts/BDOGrotesk-VF.ttf") format("ttf");
-}
+// @font-face {
+//   font-family: "BDO Grotesk";
+//   src: local("BDO Grotesk") url("/public/Fonts/BDOGrotesk-VF.ttf") format("ttf");
+// }
 
 *,
 *::after,
@@ -594,6 +594,7 @@ section {
       display: flex;
       justify-content: space-between;
     }
+
     &__total {
       padding-block: 1.6rem;
       border-block: 1px solid $color-border-faded;

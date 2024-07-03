@@ -1,6 +1,28 @@
 import { useQuery } from "@tanstack/react-query";
 import { useMainContext } from "../Context/MainStateProvider";
 import { apiGetFavourites } from "../services/apiFavourites";
+import styled from "styled-components";
+import Row from "../ui/Row";
+import { H3 } from "../ui/Headings";
+
+const LayoutGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+  gap: 2rem;
+`;
+
+const Card = styled.div`
+  display: grid;
+  gap: 0.5rem;
+
+  p {
+    color: $color-faded;
+  }
+`;
+
+const H3mod = styled(H3)`
+  margin-bottom: 2rem;
+`;
 
 export default function Favourite() {
   const { data: favourites, isLoading } = useQuery({
@@ -11,28 +33,28 @@ export default function Favourite() {
   if (isLoading) return <p>Loading</p>;
 
   return (
-    <section className="favourite">
-      <h3>Favourite</h3>
-      <div className="favourite__cards">
+    <section>
+      <H3mod>Favourite</H3mod>
+      <LayoutGrid>
         {favourites.map((product) => (
           <FavouriteCard key={product.id} product={product} />
         ))}
-      </div>
+      </LayoutGrid>
     </section>
   );
 }
 
 function FavouriteCard({ product }) {
   return (
-    <div className="card">
-      <div className="card__img">
+    <Card>
+      <div>
         <img src={product.thumbnail} alt="shoe image" />
       </div>
-      <div className="card__flex">
-        <div className="card__name">{product.name}</div>
-        <div className="card__price">MRP: ${product.price}</div>
-      </div>
+      <Row type="vertical">
+        <div>{product.name}</div>
+        <div>MRP: ${product.price}</div>
+      </Row>
       <p>{product.description}</p>
-    </div>
+    </Card>
   );
 }

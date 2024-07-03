@@ -1,7 +1,18 @@
+import styled from "styled-components";
+import Row from "./Row";
+
+const StyledFooter = styled.footer`
+  height: 15rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  display: grid;
+  padding: 2rem;
+`;
+
 export default function Footer() {
   return (
-    <footer>
-      <div className="flex">
+    <StyledFooter>
+      <Row type="horizontal">
         <div>
           <span>Resources</span>
           <p>Find a store</p>
@@ -22,8 +33,8 @@ export default function Footer() {
           <p>News</p>
           <p>Careers</p>
         </div>
-      </div>
+      </Row>
       <div>© 2024 Nike, Inc. All rights reserved</div>
-    </footer>
+    </StyledFooter>
   );
 }
